@@ -74,7 +74,7 @@ public class LoginModel implements LoginModelOps {
                 }
             });
         } else {
-            loginPresenter.registerResultFailed("Login i hasło nie mogą byc puste");
+            loginPresenter.registerResultFailed("Login and password cannot be empty");
         }
     }
 

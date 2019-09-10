@@ -48,7 +48,7 @@ public class NetworkServiceImpl implements NetworkService {
 
     public static final String UNKNOWN_ERROR = "sheet:";
     private static final String SERVER_ADDRESS =
-            "192.168.1.179";
+            " 192.168.0.121";
 //            "80.211.216.60";
     private static final int SERVER_PORT =
             8080;
@@ -442,7 +442,7 @@ public class NetworkServiceImpl implements NetworkService {
                     if (registerResult == RegisterResult.OK) {
                         loginServiceRegisterResult.registerResultOk();
                     } else if (registerResult == RegisterResult.USEREXIST) {
-                        loginServiceRegisterResult.registerResultFailed("Login zarezerwowany");
+                        loginServiceRegisterResult.registerResultFailed("Login Reserved");
                     }
 
                 } catch (IOException e) {

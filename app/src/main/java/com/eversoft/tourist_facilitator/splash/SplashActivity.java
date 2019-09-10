@@ -3,6 +3,8 @@ package com.eversoft.tourist_facilitator.splash;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+//import com.eversoft.tourist_facilitator.hotelList.HotelListActivity;
 import com.eversoft.tourist_facilitator.login.LoginActivity;
 
 

@@ -8,6 +8,7 @@ import com.eversoft.tourist_facilitator.data.serverEntity.endpoint.SearchRequest
 import com.eversoft.tourist_facilitator.filter.interfaces.LoginServiceCityListResult;
 import com.eversoft.tourist_facilitator.filter.interfaces.SearchRequestResult;
 import com.eversoft.tourist_facilitator.hotelList.interfaces.ReservationRequestResult;
+//import com.eversoft.tourist_facilitator.login.entity.LoginReqParam;
 import com.eversoft.tourist_facilitator.login.entity.LoginReqParam;
 import com.eversoft.tourist_facilitator.login.interfaces.LoginServiceLoginResult;
 import com.eversoft.tourist_facilitator.login.interfaces.LoginServiceRegisterResult;
@@ -17,7 +18,9 @@ import com.eversoft.tourist_facilitator.reservation.interfaces.UserReservationRe
 
 
 public interface NetworkService {
-    void login(LoginReqParam loginReqParam, LoginServiceLoginResult loginServiceResult);
+//    void login(LoginReqParam loginReqParam, LoginServiceLoginResult loginServiceResult);
+
+    void login(LoginReqParam loginReqParam, LoginServiceLoginResult callBack);
 
     void getCityList(LoginData loginData, LoginServiceCityListResult loginServiceCityListResult);
 

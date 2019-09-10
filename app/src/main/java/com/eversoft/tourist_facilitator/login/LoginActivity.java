@@ -16,6 +16,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.eversoft.tourist_facilitator.R;
 import com.eversoft.tourist_facilitator.data.serverEntity.endpoint.RegisterRequest;
 import com.eversoft.tourist_facilitator.filter.FilterActivity;
+import com.eversoft.tourist_facilitator.hotelList.HotelListActivity;
 import com.eversoft.tourist_facilitator.login.entity.LoginReqParam;
 import com.eversoft.tourist_facilitator.login.entity.Result;
 import com.eversoft.tourist_facilitator.login.interfaces.LoginPresenterOps;
@@ -102,13 +103,19 @@ public class LoginActivity extends AppCompatActivity implements LoginViewOps {
      */
     private void attemptLogin() {
         Log.d("MyApp_login", "view attemptLogin invoked");
-        // Store values at the time of the login attempt.
+//         Store values at the time of the login attempt.
         String login = mLoginView.getText().toString();
         String password = mPasswordView.getText().toString();
+
+//        String login = "test";
+//        String password = "test";
 
         LoginReqParam loginReqParam = new LoginReqParam(login, password);
 
         mPresenter.attemptLogin(loginReqParam);
+
+//        Intent i = new Intent(LoginActivity.this, HotelListActivity.class);
+//        startActivity(i);
     }
 
 
@@ -175,9 +182,9 @@ public class LoginActivity extends AppCompatActivity implements LoginViewOps {
     @Override
     public void showRegisterDialog() {
         MaterialDialog dialog = new MaterialDialog.Builder(this)
-                .title("Zarejestruj")
+                .title("Register")
                 .customView(R.layout.dialog_register_custom, true)
-                .positiveText("Stwórz konto")
+                .positiveText("Create an Account")
                 .onPositive(new MaterialDialog.SingleButtonCallback() {
                     @Override
                     public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
